@@ -17,8 +17,8 @@
 %{!?python_sitelib: %define python_sitelib %(%{pythonbin} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
 
 Name: tito
-Version: 0.6.11
-Release: 1%{?dist}
+Version: 6.0.11
+Release: 2
 Summary: A tool for managing rpm based git projects
 
 Group: Development/Tools
@@ -120,6 +120,29 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Jan 20 2019 Douglas Needham <cinnion@gmail.com> 6.0.11-2
+- Add environment variables surrounding test vs release builds.
+  (cinnion@gmail.com)
+- Initial Jenkinsfile version (cinnion@gmail.com)
+- Local releasers (cinnion@gmail.com)
+- Updates to LocalYumRepo to add repository maintenance using createrepo
+  (cinnion@gmail.com)
+- Create initial releaser version (cinnion@gmail.com)
+- Do not touch tests/ or gating.yaml in dist-git (khowell@redhat.com)
+- Don't pluralize with apostrophes (30503374+bby-
+  bishopclark@users.noreply.github.com)
+- Releaser: Ensure rpmlintrc files are copied when releasing
+  (ngompa13@gmail.com)
+- Releaser: Ensure SUSE-style changes file is copied when releasing
+  (ngompa13@gmail.com)
+- Tagger: Add SUSETagger to support SUSE-style detached changelogs
+  (ngompa13@gmail.com)
+- Add support for building with Git LFS. (ntillman@barracuda.com)
+- use built-in shutil.copy2 instead of relying external cp file globbing
+  (mtinberg@wisc.edu)
+- Avoid double builds with mock (tdockendorf@osc.edu)
+- Fix rsync failures in dockerized tests, update for F27. (dgoodwin@redhat.com)
+
 * Thu Dec 07 2017 Devan Goodwin <dgoodwin@rm-rf.ca> 0.6.11-1
 - Fixing remote_git_name (adammhaile@gmail.com)
 - Fix links in README.md file (mzalewsk@redhat.com)
