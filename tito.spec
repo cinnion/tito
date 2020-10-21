@@ -17,8 +17,8 @@
 %{!?python_sitelib: %define python_sitelib %(%{pythonbin} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
 
 Name: tito
-Version: 0.6.11
-Release: 1%{?dist}
+Version: 0.6.14
+Release: 2ka8zrt
 Summary: A tool for managing rpm based git projects
 
 Group: Development/Tools
@@ -120,6 +120,12 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Oct 21 2020 Douglas Needham <cinnion@gmail.com> 0.6.14-2ka8zrt
+- Add local test releasers for LocalYumRepoReleaser (cinnion@gmail.com)
+- Updates to LocalYumRepo to add repository maintenance using createrepo
+  (cinnion@gmail.com)
+- Create initial releaser version (cinnion@gmail.com)
+
 * Thu Dec 07 2017 Devan Goodwin <dgoodwin@rm-rf.ca> 0.6.11-1
 - Fixing remote_git_name (adammhaile@gmail.com)
 - Fix links in README.md file (mzalewsk@redhat.com)
