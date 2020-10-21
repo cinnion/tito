@@ -17,7 +17,7 @@
 
 Name: tito
 Version: 0.6.15
-Release: 1%{?dist}
+Release: 2ka8zrt
 Summary: A tool for managing rpm based git projects
 
 License: GPLv2
@@ -118,6 +118,19 @@ install -Dp -m 0644 share/tito_completion.sh %{buildroot}%{_datadir}/bash-comple
 
 
 %changelog
+* Wed Oct 21 2020 Douglas Needham <cinnion@gmail.com> 0.6.15-2ka8zrt
+- Add local releasers for LocalYumRepoReleaser (cinnion@gmail.com)
+- Updates to LocalYumRepo to add repository maintenance using createrepo
+  (cinnion@gmail.com)
+- Create initial releaser version (cinnion@gmail.com)
+- Make tests working on systems without non-versioned python macros
+  (frostyx@email.cz)
+- Ignore spectool warnings (frostyx@email.cz)
+- Skip nonexisting extra sources (frostyx@email.cz)
+- Fix copy_extra_sources for remote URLs (frostyx@email.cz)
+- Do not use absolute path to generate-patches.pl script (jhnidek@redhat.com)
+- Use --no-rebuild-srpm for scratch builds in KojiReleaser (frostyx@email.cz)
+
 * Fri Jul 10 2020 Jakub Kadlcik <frostyx@email.cz> 0.6.15-1
 - FedoraGitReleaser: upload extra sources to lookaside cache
   (praiskup@redhat.com)
